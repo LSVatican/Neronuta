@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neronuta - Beranda</title>
+    <link rel="icon" href="logo.png" type="image/png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="profile-card">
+            <img id="avatar" src="logo.png" alt="Avatar">
+            <h2 id="username" class="glow-text">Memuat...</h2>
+            <p>Selamat Datang di Neronuta</p>
+            <button onclick="logout()" class="btn-logout">Logout</button>
+        </div>
+        
+        <div class="watermark">LS Vatican</div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        // Cek data user saat halaman dimuat
+        window.onload = () => {
+            const fragment = new URLSearchParams(window.location.hash.slice(1));
+            const accessToken = fragment.get('access_token');
+
+            if (!accessToken) {
+                window.location.href = 'index.html';
+            } else {
+                fetch('https://discord.com/api/users/@me', {
+                    headers: { authorization: `Bearer ${accessToken}` }
+                })
+                .then(res => res.json())
+                .then(data => {
+                    document.getElementById('username').innerText = data.username;
+                    document.getElementById('avatar').src = `https://cdn.discordapp.com/avatars/${data.id}/${data.avatar}.png`;
+                });
+            }
+        };
+    </script>
+</body>
+</html>

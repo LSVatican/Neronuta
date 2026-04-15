@@ -1,0 +1,83 @@
+:root {
+    --pink-glow: #ff2d75;
+    --dark-bg: #0d0208;
+}
+
+body {
+    background-color: var(--dark-bg);
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+}
+
+.container {
+    text-align: center;
+    padding: 30px;
+    border: 2px solid var(--pink-glow);
+    border-radius: 20px;
+    box-shadow: 0 0 20px var(--pink-glow), inset 0 0 10px var(--pink-glow);
+    background: rgba(255, 45, 117, 0.05);
+    backdrop-filter: blur(5px);
+}
+
+.logo-main {
+    width: 100px;
+    filter: drop-shadow(0 0 10px var(--pink-glow));
+    margin-bottom: 10px;
+}
+
+.glow-text {
+    font-size: 2.5rem;
+    color: white;
+    -webkit-text-stroke: 1px var(--pink-glow);
+    text-shadow: 0 0 15px var(--pink-glow);
+    margin: 10px 0;
+}
+
+.btn-discord, .btn-logout {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background: transparent;
+    color: white;
+    border: 2px solid var(--pink-glow);
+    padding: 12px 25px;
+    font-size: 1rem;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0 0 10px var(--pink-glow);
+    margin-top: 20px;
+}
+
+.btn-discord:hover {
+    background: var(--pink-glow);
+    box-shadow: 0 0 30px var(--pink-glow);
+}
+
+.btn-discord img {
+    width: 20px;
+}
+
+.watermark {
+    position: absolute;
+    bottom: 15px;
+    right: 20px;
+    font-size: 12px;
+    color: rgba(255, 45, 117, 0.5);
+    letter-spacing: 2px;
+}
+
+/* Profil Avatar di Home */
+#avatar {
+    width: 80px;
+    border-radius: 50%;
+    border: 3px solid var(--pink-glow);
+    box-shadow: 0 0 15px var(--pink-glow);
+}
