@@ -1,5 +1,5 @@
 const CLIENT_ID = '1493975600870850600'; 
-const REDIRECT_URI = encodeURIComponent('https://discord.com/oauth2/authorize?client_id=1493975600870850600&response_type=code&redirect_uri=https%3A%2F%2Fneronuta.vercel.app%2Fhome.html&scope=identify');
+const REDIRECT_URI = encodeURIComponent('https://discord.com/oauth2/authorize?client_id=1493975600870850600&response_type=code&redirect_uri=https%3A%2F%2Fneronuta.vercel.app%2F&scope=identify+connections');
 
 function loginDiscord() {
     const scope = 'identify';
