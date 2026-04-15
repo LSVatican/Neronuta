@@ -1,9 +1,9 @@
-const CLIENT_ID = '1493975600870850600'; 
-const REDIRECT_URI = encodeURIComponent('https://discord.com/oauth2/authorize?client_id=1493975600870850600&response_type=code&redirect_uri=https%3A%2F%2Fneronuta.vercel.app%2F&scope=identify+connections');
+const CLIENT_ID = 'CLIENT_ID_KAMU'; 
+const REDIRECT_URI = encodeURIComponent('https://neronuta.vercel.app/home.html');
 
 function loginDiscord() {
     const scope = 'identify';
-    const authUrl = `https://discord.com/api/oauth2/authorize?client_id=${CLIENT_ID}&redirect_uri=${REDIRECT_URI}&response_type=token&scope=${scope}`;
+    const authUrl = `https://discord.com/oauth2/authorize?client_id=1493975600870850600&response_type=code&redirect_uri=https%3A%2F%2Fneronuta.vercel.app%2F&scope=identify`;
     
     window.location.href = authUrl;
 }
